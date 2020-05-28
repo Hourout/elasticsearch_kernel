@@ -23,7 +23,7 @@ class ElasticsearchKernel(Kernel):
         if not self.silent:
             if isinstance(output, dict):
                 display_content = {'source': 'kernel',
-                                   'data': {'text/json': output},
+                                   'data': {'text/json': str(output)},
                                    'metadata': {}}
             else:
                 display_content = {'source': 'kernel',
