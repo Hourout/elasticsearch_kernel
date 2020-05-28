@@ -4,7 +4,7 @@ Elasticsearch  Kernel for Jupyter
 
 ![PyPI version](https://img.shields.io/pypi/pyversions/elasticsearch_kernel.svg)
 ![Github license](https://img.shields.io/github/license/Hourout/elasticsearch_kernel.svg)
-[![PyPI](https://img.shields.io/pypi/v/hive_kernel.svg)](https://pypi.python.org/pypi/elasticsearch_kernel)
+[![PyPI](https://img.shields.io/pypi/v/elasticsearch_kernel.svg)](https://pypi.python.org/pypi/elasticsearch_kernel)
 ![PyPI format](https://img.shields.io/pypi/format/elasticsearch_kernel.svg)
 ![contributors](https://img.shields.io/github/contributors/Hourout/elasticsearch_kernel)
 ![downloads](https://img.shields.io/pypi/dm/elasticsearch_kernel.svg)
