@@ -21,14 +21,9 @@ class ElasticsearchKernel(Kernel):
         
     def output(self, output):
         if not self.silent:
-            if isinstance(output, dict):
-                display_content = {'source': 'kernel',
-                                   'data': {'text/json': str(output)},
-                                   'metadata': {}}
-            else:
-                display_content = {'source': 'kernel',
-                                   'data': {'text/html': output},
-                                   'metadata': {}}
+            display_content = {'source': 'kernel',
+                               'data': {'text/html': output},
+                               'metadata': {}}
             self.send_response(self.iopub_socket, 'display_data', display_content)
     
     def ok(self):
@@ -55,7 +50,7 @@ class ElasticsearchKernel(Kernel):
                 if len(l)>0:
                     if l.startswith('elasticsearch://') or l.startswith('es://'):
                         self.engine = l.replace('elasticsearch', 'es').replace('es', 'http')
-                        output = requests.get(self.engine).json()
+                        output = str(requests.get(self.engine).json())
                         self.engine += '/_sql'
                     else:
                         if self.engine:
