@@ -50,7 +50,7 @@ class ElasticsearchKernel(Kernel):
                 if len(l)>0:
                     if l.startswith('elasticsearch://') or l.startswith('es://'):
                         self.engine = l.replace('elasticsearch', 'es').replace('es', 'http')
-                        output = requests.get(self.engine).text
+                        output = str(requests.get(self.engine).json())
                         self.engine += '/_sql'
                     else:
                         if self.engine:
